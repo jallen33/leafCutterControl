@@ -4,7 +4,7 @@ The design was done using Autodesk Inventor. The [zip folder](jallen33/leafCutte
 
 A few notes before assembling:
 - Part *rod_insert_m5.ipt* needs to be tapped with an M5x.8 tap
-- Parts fitting into carbon fiber rods should be set the epoxy
+- Parts fitting into carbon fiber rods should be set with epoxy
 
 ## Drone and Comminication Consideration
-The assembly is mounted to a DJI F450 drone. Both the drone and the emergency release mechanism are controlled by the Futaba conroller (two seperate receivers). 
+The assembly is mounted to a DJI F450 drone. Both the drone and the emergency release mechanism are controlled by the Futaba conroller (two seperate receivers).
