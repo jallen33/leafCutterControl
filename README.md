@@ -9,5 +9,8 @@ A few notes before assembling:
 ## Drone and Comminication Consideration
 The assembly is mounted to a DJI F450 drone. Both the drone and the emergency release mechanism are controlled by the Futaba conroller (two seperate receivers).
 
-## Serial Communication
-An Arduino is used to obtain Analog data from the two potentiometers and the force sensor. This allows for serial communication in the future. *Add any consideration from the Arduino code when finished*.
+## Hardware Softwawre Interface
+An Arduino is used to obtain analog data from the two potentiometers and the force sensor. The two potentiometer are wired directly to the Arduino. The force sensor connect to an amplifier circuit. The amplifier circuit is then wired to the Arduino. 
+
+### Serial Communication
+The [Arduino script](jallen33/leafCutterControl/controlLL/controlLL.ino) prints the analog values to the serial monitor for serial communication. *Add any consideration from the Arduino code when finished*.
