@@ -1,6 +1,6 @@
 # leafCutterControl
 ## Mechanical Considerations
-The design was done using Autodesk Inventor. The [zip folder](jallen33/leafCutterControl/f450_assembly.zip) contains all the CAD files and assemblies relating to the design. The zip folder also contains *.stl* files for the parts that were 3D printed. In addition, a [build file]((jallen33/leafCutterControl/f450_assembly.mfp) that contains all the necessary 3D printed parts for markforged printers is available. There is also a [list]((jallen33/leafCutterControl/leaf_cutter_control_parts_list.xlsx) of of all the parts that need to be ordered or on hand for assembly.
+The design was done using Autodesk Inventor. The [zip folder](jallen33/leafCutterControl/f450_assembly.zip) contains all the CAD files and assemblies relating to the design. The zip folder also contains *.stl* files for the parts that were 3D printed. In addition, a [build file](jallen33/leafCutterControl/f450_assembly.mfp) that contains all the necessary 3D printed parts for markforged printers is available. There is also a [list](jallen33/leafCutterControl/leaf_cutter_control_parts_list.xlsx) of of all the parts that need to be ordered or on hand for assembly.
 
 A few notes before assembling:
 - Part *rod_insert_m5.ipt* needs to be tapped with an M5x.8 tap
