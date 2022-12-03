@@ -8,3 +8,6 @@ A few notes before assembling:
 
 ## Drone and Comminication Consideration
 The assembly is mounted to a DJI F450 drone. Both the drone and the emergency release mechanism are controlled by the Futaba conroller (two seperate receivers).
+
+## Serial Communication
+An Arduino is used to obtain Analog data from the two potentiometers and the force sensor. This allows for serial communication in the future. *Add any consideration from the Arduino code when finished*.
