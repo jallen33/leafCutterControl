@@ -3,7 +3,7 @@
 The design was done using Autodesk Inventor. The [zip folder](/f450_assembly.zip) contains all the CAD files and assemblies relating to the design. The zip folder also contains *.stl* files for the parts that were 3D printed. In addition, a [build file](/f450_assembly.mfp) that contains all the necessary 3D printed parts for markforged printers is available. There is also a [list](/leaf_cutter_control_part_list.xlsx) of of all the parts that need to be ordered or on hand for assembly.
 
 A few notes before assembling:
-- Part *rod_insert_m5.ipt* needs to be tapped with an M5x.8 tap
+- Part *rod_insert_m5.ipt* needs to be tapped with an M5x.8 tap after 3D printing
 - Parts fitting into carbon fiber rods should be set with epoxy
 
 ## Drone Considerations
