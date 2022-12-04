@@ -10,7 +10,7 @@ A few notes before assembling:
 The assembly is mounted to a DJI F450 drone. Both the drone and the emergency release mechanism are controlled by a Futaba conroller (two seperate receivers).
 
 ## Hardware Softwawre Interface
-An Arduino is used to obtain analog data from the two potentiometers and the force sensor. The two potentiometer are wired directly to the Arduino. The force sensor connect to an amplifier circuit. The amplifier circuit is then wired to the Arduino. 
+An Arduino board is used to obtain analog data from the two potentiometers and the force sensor. The two potentiometer are wired directly to the Arduino. The force sensor connect to an amplifier circuit. The amplifier circuit is then wired to the Arduino. 
 
 ### Serial Communication
 The [Arduino script](/controlLL/controlLL.ino) prints the analog values to the serial monitor for serial communication. *Add any consideration from the Arduino code when finished*.
