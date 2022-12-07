@@ -6,7 +6,7 @@ A few notes before assembling:
 - Part *rod_insert_m5.ipt* needs to be tapped with an M5x.8 tap after 3D printing
 - Parts fitting into carbon fiber rods should be set with epoxy
 
-## Drone Considerations
+## Drone Assembly
 The assembly is mounted to a DJI F450 drone. Both the drone and the emergency release mechanism are controlled by a Futaba conroller (two seperate receivers).
 
 ## Hardware Software Interface
