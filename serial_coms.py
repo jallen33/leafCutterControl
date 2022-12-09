@@ -3,7 +3,7 @@ import time
 import struct
 
 port_file = '/dev/tty.usbserial-AC012VDW'
-baud = 9600
+baud = 57600
 
 port = serial.Serial(port=port_file, baudrate=baud)
 
@@ -28,10 +28,14 @@ while True:
     while a != b'$':
         print(a)
 
+    print("Pitch: ")
     receiveData()
+    print("Roll:")
+    receiveData()
+    print("Weight:")
     receiveData()
 
     print()
     print()
 
-    time.sleep(0.5)
+    time.sleep(0.01)
