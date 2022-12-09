@@ -32,7 +32,7 @@ while True:
     receiveData()
     print("Roll:")
     receiveData()
-    print("Weight:")
+    print("Weight in grams:")
     receiveData()
 
     print()
