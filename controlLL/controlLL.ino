@@ -1,12 +1,16 @@
 #include "HX711.h"
+
+// define analog pins
 #define roll_pot A1
 #define pitch_pot A0
 
 // HX711 circuit wiring
 const int LOADCELL_DOUT_PIN = 2;
 const int LOADCELL_SCK_PIN = 3;
+
 HX711 scale;
 
+// write data to serial port
 void sendData(int32_t val){
   uint8_t v = (val >> 24) & 0xFF;
   Serial.write(v);
@@ -22,20 +26,26 @@ void sendData(int32_t val){
 void setup() {
   // initialize serial communication at 9600 bits per second:
   Serial.begin(57600);
-  scale.begin(LOADCELL_DOUT_PIN, LOADCELL_SCK_PIN);
-  scale.set_scale(-53);                      // this value is obtained by calibrating the scale with known weights; see the README for details
+  scale.begin(LOADCELL_DOUT_PIN, LOADCELL_SCK_PIN); // intialize the scale
+  scale.set_scale(-53);  // calibration factor
   scale.tare();
 }
 
 // the loop routine runs over and over again forever:
 void loop() {
-  // read the input on analog pin A0:
+  // read the input from the analog pins
   int analogValue_roll = analogRead(roll_pot);
   int analogValue_pitch = analogRead(pitch_pot);
-  // Rescale to potentiometer's voltage (from 0V to 5mV):
+
+  // Rescale to potentiometer to angles:
   int voltage_roll = map(analogValue_roll, 0, 1023, -140, 130);
   int voltage_pitch = map(analogValue_pitch, 0, 1023, -131, 139);
+
+  // read the weight on the scal in grams
   int weight = scale.get_units(10);
+
+/*
+used for debuggin
 
 //  // print out the value you read:
 //  Serial.print("Analog: ");
@@ -46,14 +56,15 @@ void loop() {
 //  Serial.println(voltage_pitch);
 //  Serial.print("Weight: ");
 //  Serial.println(weight);
+//  delay(2000);
+*/
 
 
-  Serial.write('!');
-  Serial.write('$');
-  sendData(voltage_roll);
-  sendData(voltage_pitch);
-  sendData(weight);
+  Serial.write('!'); // start bit
+  Serial.write('$'); // start bit
+  sendData(voltage_roll); // send data
+  sendData(voltage_pitch); // send data
+  sendData(weight); // send data
   
   delay(25);
-//  delay(2000);
 }
