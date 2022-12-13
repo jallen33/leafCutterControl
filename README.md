@@ -10,10 +10,14 @@ A few notes before assembling:
 The assembly is mounted to a DJI F450 drone. Both the drone and the emergency release mechanism are controlled by a Futaba conroller (two seperate receivers).
 
 ## Hardware Software Interface
-An Arduino board is used to obtain analog data from the two potentiometers and the force sensor. The two potentiometer are wired directly to the Arduino. The force sensor connect to an amplifier circuit. The amplifier circuit is then wired to the Arduino. 
+An Arduino board is used to obtain analog data from the two potentiometers and the force sensor. The two potentiometer are wired directly to the Arduino. The force sensor connects to an amplifier circuit. The amplifier circuit is then wired to the Arduino. 
 
 ### Serial Communication
 The [Arduino script](/controlLL/controlLL.ino) prints the data to the serial monitor for serial communication. The [Python script](/serial_coms.py) reads the serial monitor and prints the data to the command line to be used later. The data printed is roll and pitch angles and weight from the force cell in grams.
+
+## Setup
+
+Power on the Drone. place the drone on a table or elevated surface where the rods are dangling from the drone and not connected to anything. Then press the reset button the Arduino to tare the force sensor. The drone is now ready to send angle and force data. Open `serial_coms.py` and run the script. The angle values for pitch and roll as well as the weight in grams should be printed to the terminal. Once verified the system is ready to use. 
 
 ## Future Work
 Moving forward, the angles and weight values will be fed into the controller to control the drone while it executes a cutting sequence or in this case a simulated cutting sequence. In general, the data will be fed into a Rhaspberry Pi and mavros will be used to process the data. The processed data can be fed into a pixhawk contoller and used to control the drone. 
