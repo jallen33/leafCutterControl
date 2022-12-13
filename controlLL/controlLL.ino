@@ -1,3 +1,6 @@
+// refer to https://github.com/bogde/HX711 for more information on the HX711 library
+
+
 #include "HX711.h"
 
 // define analog pins
